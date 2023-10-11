@@ -15,28 +15,28 @@
     </head>
     <body>
         <div class="circular">
-            <!-- <div class="inner"></div>
-            <div class="numb">0%</div> -->
+            <div class="inner"></div>
+            <div class="numb">1</div>
             <div class="circle">
                 <div class="bar left">
-                    <div class="progress"></div>
+                    <div class="progress1"></div>
                 </div>
                 <div class="bar right">
-                    <div class="progress"></div>
+                    <div class="progress2"></div>
                 </div>
             </div>
         </div>
         <script>
-            // const numb = document.querySelector('.numb');
-            // let counter = 0;
-            // setInterval(()=>{
-                if(counter == 100){
+            const numb = document.querySelector('.numb');
+            let counter = 1;
+            setInterval(()=>{
+                if(counter == 5){
                     clearInterval()
                 }else{
                     counter+=1;
-                    numb.textContent = counter + "%";
+                    numb.textContent = counter;
                 }
-            },80);
+            },1000);
         </script>
     </body>
 </html>

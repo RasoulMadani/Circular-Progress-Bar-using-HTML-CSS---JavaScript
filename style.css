@@ -19,7 +19,7 @@ body {
   position: relative;
   transform: scale(2);
   > .inner {
-    display: none;
+    /* display: none; */
     position: absolute;
     z-index: 6;
     top: 50%;
@@ -35,9 +35,9 @@ body {
     position: absolute;
     top: 50%;left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 10;
+    z-index: 20;
     font-size: 18px;
-    color: #4158d0;
+    color: #60d041;
   }
   .circle {
     .bar {
@@ -47,7 +47,15 @@ body {
       background: #fff;
       border-radius: 100%;
       clip: rect(0px, 100px, 100px, 50px);
-      > .progress {
+      > .progress1 {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 100%;
+        clip: rect(0px, 50px, 100px, 0px);
+        background: #4158d0;
+      }
+      > .progress2 {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -56,17 +64,17 @@ body {
         background: #4158d0;
       }
     }
-    .left .progress{
+    .left .progress1{
         z-index: 1;
-        /* animation: left 4s linear both; */
+        animation: left 2.5s linear both;
     }
     .right{
         z-index: 3;
         transform: rotate(180deg);
     }
-    .right .progress{
-        /* animation: right 4s linear both; */
-        animation-delay: 4s;
+    .right .progress2{
+        animation: right 2.5s linear both;
+        animation-delay: 2.5s;
     }
   }
 }
